@@ -1,0 +1,83 @@
+body{
+	margin:0; padding:0;font-size:12px;
+}
+.display_none{
+	display:none;
+}
+.width_50{
+	width:50px;
+}
+.content{
+	margin:5px;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+.align_center{
+	text-algin:center;
+}
+.margin_center{
+	margin:0 auto;
+}
+.left_side{
+	width:850px;
+}
+.ltitle{
+	height:25px;
+	border:1px solid #CCCCCC;
+	padding:0 0 0 20px;
+	line-height:25px;
+	position:relative;
+}
+.ltitle ul{
+	margin:0; padding:0;
+}
+.ltitle li{
+	
+	list-style:none;
+	width:120px;
+	float:left;
+}
+.lpanel{
+	margin:5px 0 0 0;
+	height:500px;
+	border:1px solid #CCCCCC;
+}
+.lmenu{
+	position:absolute;
+	right:0px;
+	top:2px;
+}
+
+.right_side{
+	width:350px;
+}
+
+.button_bar_window{
+	background:#EFF4FB;
+	width:400px;
+	height:42px;
+}
+.rselector{
+	border:1px solid #CCCCCC;
+	height:532px;
+	margin:0 0 0 5px;
+	padding:5px;
+}
+.button_bar_icon{
+	float:left;
+	margin:2px 0 0 2px;
+	background:#FFF url(/html/SaladoPlayer/modules/buttonbar/images/buttons_dark_40x40.png) no-repeat;
+}
+
+
+
+
+
+
+
+
+

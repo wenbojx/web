@@ -1,0 +1,198 @@
+@CHARSET "UTF-8";
+html {
+    height:100%;
+}
+body {
+    margin:0;
+    font:14px/1.8 Tahoma, Geneva, '\5B8B\4F53';
+    color:#515B65;
+}
+input, textarea, select {
+    margin:0;
+    padding:0;
+    font-size:12px;
+    outline:none;
+}
+form,
+ul, ol, li,
+dl, dt, dd,
+h1, h2, h3, h4, h5,
+p {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a {
+    text-decoration:none;
+    color:#4682D1;
+    outline:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+a img {
+    border:none;
+}
+i, em {
+    font-style:normal;
+}
+b {
+    color:#F60;
+}
+button {
+    cursor:pointer;
+}
+button i {
+    display:none;
+}
+/**/
+
+/*通用图标*/
+.icon {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    overflow:hidden;
+}
+
+/*文斌框*/
+.input-box{
+}
+.input-box input,textarea{
+    padding:5px;
+    width:280px;
+    /*font-size:14px;*/
+}
+.input-box li{
+    margin:0 0 5px 10px;
+}
+.input-box-save{
+	padding:15px 0 0 0 ;
+}
+
+
+/*通用按钮*/
+.button {
+    position:relative;
+    display:inline-block;
+    height:32px;
+    padding:0 15px;
+    line-height:33px;
+    overflow:hidden;
+    font-size:14px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#FFF;
+    text-shadow:0 1px #427AC7;
+    border:1px solid #427AC7;
+    border-radius:2px;
+    background-color:#4B88DC;
+    background-image:url(../images/button_bg.png);
+    background-repeat:no-repeat;
+    background-position:0 0;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);
+    cursor:pointer;
+}
+.button:hover {
+    text-decoration:none;
+    color:#FFF;
+    background-position:0 -33px;
+}
+.button:active { background-position:0 -66px; }
+/**/
+
+/*橙色按钮*/
+.btn-orange {
+    text-shadow:0 1px #EA6302;
+    border-color:#EA6302;
+    background-color:#FF821C;
+    background-position:0 -297px;
+}
+.btn-orange:hover { background-position:0 -330px; }
+.btn-orange:active { background-position:0 -363px; }
+/**/
+
+/*灰色按钮*/
+.btn-gray,
+.btn-wrap .btn {
+    color:#666;
+    text-shadow:0 1px #FFF;
+    border-color:#C5C5C5;
+    background-color:#EEE;
+    background-position:0 -99px;
+}
+.btn-gray:hover,
+.btn-wrap .btn:hover {
+    color:#666;
+    border-color:#A7A7A7;
+    background-position:0 -132px;
+}
+.btn-gray:active,
+.btn-focus,
+.btn-focus:hover,
+.btn-wrap .btn:active,
+.btn-wrap .focus,
+.btn-wrap .focus:hover,
+.btn-wrap .btn-focus,
+.btn-wrap .btn-focus:hover {
+    color:#666;
+    border-color:#A7A7A7;
+    background-position:0 -165px;
+}
+/**/
+
+.dialog-bottom .button {
+    float:left;
+    margin-right:10px;
+    padding:0 20px;
+}
+
+.box_open{
+    position:relative;
+    width:605px;
+    heigth:455px;
+    margin:0;
+    display:block;
+}
+.box_open .box_side{
+    width:150px;
+    height:150px;
+    position:absolute;
+    background-color:#F3F3F3;
+}
+.box_open .box_left{
+    top:151px;
+}
+.box_open .box_down{
+    top:151px;
+    left:151px;
+}
+.box_open .box_right{
+    top:151px;
+    left:302px;
+}
+.box_open .box_up{
+    top:151px;
+    left:453px;
+}
+.box_open .box_front{
+    left:151px;
+}
+.box_open .box_back{
+    top:302px;
+    left:151px;
+}
+
+.panolist{
+	width:800px;
+	margin:0 auto;
+}
+.panodetail{
+	width:240px; margin:10px 10px 0 0;float:left;text-align:center;
+}
+
+
+
+
+
+

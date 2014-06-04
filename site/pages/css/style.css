@@ -1,0 +1,558 @@
+@charset "utf-8";
+/* CSS Document */
+html,
+body {
+    height:100%;
+    margin:0;
+    overflow:hidden;
+    font:12px/1.8 Tahoma, Geneva, '\5B8B\4F53';
+    color:#5B636A;
+}
+input, textarea, select {
+    position:relative;
+    /*min-width:900px;*/
+    height:100%;
+    overflow:hidden;
+}
+
+form,
+ul, ol, li,
+dl, dt, dd,
+h1, h2, h3, h4, h5,
+p {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a {
+    text-decoration:none;
+    color:#4682D1;
+    outline:none;
+}
+a:hover {
+    text-decoration:underline;
+}
+a img {
+    border:none;
+}
+i, em {
+    font-style:normal;
+}
+b {
+    color:#F60;
+}
+button {
+    cursor:pointer;
+}
+button i {
+    display:none;
+}
+
+.container{
+    height:100%;
+    min_width:900px;
+    overflow:hidden;
+    position:relative;
+}
+/*左侧*/
+.col_left{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:9;
+    width:98px;
+    height:100%;
+    border-left:1px solid #DAE2ED;
+    border-right:1px solid #AFB7C3;
+    background:#EEF2F7;
+}
+/*LOGO*/
+.logo {
+    height:48px;
+    padding:10px;
+    overflow:hidden;
+    margin-bottom:20px;
+    border-bottom:1px solid #D2D9E2;
+}
+.logo a {
+    position:relative;
+    left:15px;
+    float:left;
+    width:48px;
+    height:48px;
+    line-height:10;
+    overflow:hidden;
+    font-size:12px;
+    background:url(../images/logo.gif) no-repeat 0 0;
+}
+/*主目录图标*/
+.ico-dm {
+    display:block;
+    width:48px;
+    height:48px;
+    margin:auto;
+    overflow:hidden;
+    background-image:url(../images/ico_directory_menu.png?v=1);
+    _background-image:url(../images/ico_directory_menu.gif?v=1);
+    background-repeat:no-repeat;
+}
+.dm-cloud { background-position:0 0; }
+.dm-notebook { background-position:-50px 0; }
+.dm-circle { background-position:-100px 0; }
+.dm-message { background-position:-150px 0; }
+a:hover .dm-cloud, li.focus .dm-cloud { background-position:0 -50px; }
+a:hover .dm-notebook, li.focus .dm-notebook { background-position:-50px -50px; }
+a:hover .dm-circle, li.focus .dm-circle { background-position:-100px -50px; }
+a:hover .dm-message, li.focus .dm-message { background-position:-150px -50px; }
+
+/*左侧目录*/
+.left_menu {
+    position:absolute;
+    left:-1px;
+    width:99px;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+}
+.left_menu li {
+    position:relative;
+    margin-bottom:20px;
+    padding:10px 5px 5px 0;
+    border-left:5px solid;
+    border-color:transparent;
+    _border-color:#EEF2F7;
+}
+.left_menu li.focus {
+    border-color:#4783D3;
+    background:#D6E0ED;
+}
+.left_menu li a {
+    position:relative;
+    display:block;
+    width:60px;
+    margin:auto;
+    color:#9499A3;
+    cursor:pointer;
+}
+.left_menu li a:hover {
+    text-decoration:none;
+    color:#515B65;
+}
+.left_menu li.focus a {
+    font-weight:bold;
+    color:#515B65;
+    cursor:default;
+}
+.left_menu li em {
+    position:absolute;
+    top:-5px;
+    right:0;
+    height:16px;
+    padding:0 5px;
+    line-height:16px;
+    font-weight:normal;
+    color:#FFF;
+    border-radius:8px;
+    background:#ED4116;
+    background:-webkit-linear-gradient(top, #F26522, #ED4116 100%);
+    background:-moz-linear-gradient(top, #F26522, #ED4116 100%);
+    background:-o-linear-gradient(top, #F26522, #ED4116 100%);
+    box-shadow:1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.left_menu li span {
+    display:block;
+    width:60px;
+    height:22px;
+    padding:5px 0 0;
+    line-height:22px;
+    text-align:center;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+/*右侧边*/
+.col_right{
+    position:absolute;
+    top:0;
+    right:0;
+    width:180px;
+    height:100%;
+    background:#EEF2F7;
+    box-shadow:inset 1px 0 3px rgba(0, 0, 0, 0.2);
+}
+.right-sub-header {
+    height:44px;
+    padding:0 15px;
+    line-height:45px;
+    overflow:hidden;
+    font-size:14px;
+    font-weight:bold;
+    border-bottom:1px solid #D9DFE7;
+}
+.client-link {
+    padding:5px 10px;
+}
+.client-link li {
+    padding:0 10px;
+    vertical-align:middle;
+    border-bottom:1px dotted #CCC;
+}
+.client-link a {
+    position:relative;
+    display:block;
+    height:30px;
+    padding-left:25px;
+    line-height:31px;
+    overflow:hidden;
+    color:#666;
+}
+.client-link a:hover {
+    text-decoration:none;
+}
+.ico-client {
+    position:absolute;
+    top:7px;
+    left:0;
+    width:16px;
+    height:16px;
+    overflow:hidden;
+    background-image:url(../images/ico_client.gif?v=2);
+    background-repeat:no-repeat;
+}
+.ic-windows { background-position:0 0; }
+.ic-android { background-position:0 -20px; }
+.ic-iphone { background-position:0 -40px; }
+.ic-ipad { background-position:0 -60px; }
+.ic-wphone { background-position:0 -80px; }
+.ic-mac { background-position:0 -100px; }
+
+
+
+
+.col_center{
+    position:relative;
+    height:100%;
+    margin:0 180px 0 100px;
+    background:#FFF;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+/*功能介绍*/
+.feature-show {
+    height:447px;
+    margin-top:-20px;
+    overflow:hidden;
+    background:url(../images/banner_bg.png) repeat-x center 0;
+    _width:100%;
+}
+
+/*用户登录*/
+.login-box {
+    position:relative;
+    z-index:2;
+    width:594px;
+    margin:auto;
+    padding-top:25px;
+}
+.login-box ul { height:92px; }
+.login-box li {
+    position:relative;
+    float:left;
+    width:232px;
+    height:46px;
+    margin-right:10px;
+    line-height:46px;
+    font-size:14px;
+    font-weight:bold;
+}
+.login-box li.s {
+    width:110px;
+    margin-right:0;
+    text-align:center;
+}
+.login-box label {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    height:46px;
+    line-height:46px;
+    text-indent:13px;
+    font-size:16px;
+    font-weight:bold;
+    color:#999;
+    cursor:text;
+}
+.login-box .text,
+.login-box .btn-login {
+    background-image:url(../images/form.png);
+    background-repeat:no-repeat;
+}
+.login-box .text {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    width:206px;
+    height:18px;
+    padding:13px 12px;
+    line-height:18px;
+    font-size:16px;
+    font-weight:bold;
+    border:1px solid #CBCBCB;
+    background-position:-1px -1px;
+}
+.login-box .btn-login {
+    float:left;
+    width:110px;
+    height:46px;
+    border:0 none;
+    background-color:#4986D8;
+    background-position:0 -50px;
+}
+.login-box .btn-login:hover { background-position:-110px -50px; }
+.login-box .btn-login:active { background-position:-220px -50px; }
+.login-box .ico-war {
+    position:absolute;
+    top:14px;
+    right:10px;
+    z-index:3;
+    width:18px;
+    height:18px;
+    overflow:hidden;
+    background:url(../images/icon_popup.gif) no-repeat 0 0;
+    cursor:pointer;
+}
+.login-box li em {
+    float:left;
+    padding:0 5px;
+}
+.login-box li em a { color:#5B636A; }
+.login-box .status-save input {
+    position:absolute;
+    top:16px;
+    left:0;
+    width:14px;
+    height:14px;
+}
+.login-box .status-save label {
+    top:0;
+    left:20px;
+    text-indent:0;
+    font-size:14px;
+    color:#5B636A;
+    cursor:default;
+}
+
+/*页脚*/
+.footer {
+    position:relative;
+    z-index:2;
+    padding:15px 0;
+    line-height:2;
+    text-align:center;
+    color:#999;
+}
+.footer a { color:#999; }
+.footer a:hover { color:#333; }
+/**/
+
+
+/*注册帐户*/
+.register-title {
+    height:40px;
+    padding:15px;
+    text-align:center;
+    overflow:hidden;
+    background:#4682D9;
+}
+.register-title h2,
+.register-title h3 {
+    display:inline-block;
+    padding:0 6px;
+    vertical-align:bottom;
+    font-weight:normal;
+    *display:inline;
+    *zoom:1;
+}
+.register-title h2 {
+    height:40px;
+    line-height:40px;
+    font-size:38px;
+    color:#FFF;
+}
+.register-title h3 {
+    height:24px;
+    line-height:24px;
+    font-size:18px;
+    color:#4682D9;
+    border-radius:4px;
+    background:#EFF3F7;
+}
+/*注册区域*/
+.register-box {
+    width:500px;
+    height:330px;
+    margin:auto;
+    padding-top:30px;
+}
+.reg-mobile-title {
+    position:relative;
+    left:106px;
+    width:373px;
+    height:69px;
+    line-height:30;
+    overflow:hidden;
+    background:url(../images/reg_mobile_title.gif) no-repeat 0 0;
+}
+.register-box dl {
+    padding:0 60px 0 24px;
+    zoom:1;
+}
+.register-box dt {
+    float:left;
+    width:116px;
+    height:60px;
+    line-height:40px;
+    text-align:right;
+    font-size:16px;
+    color:#666;
+}
+.register-box dd {
+    position:relative;
+    float:right;
+    width:300px;
+    height:60px;
+
+}
+.register-box label {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    height:20px;
+    padding:10px;
+    line-height:21px;
+    overflow:hidden;
+    font-size:16px;
+    color:#BBB;
+    cursor:text;
+}
+.register-box .text {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:1;
+    width:280px;
+    height:20px;
+    padding:9px;
+    line-height:20px;
+    font-size:16px;
+    color:#666;
+    border:1px solid #D6D6D6;
+    border-top-color:#AFAFAF;
+    background:#FFF url(../images/text.gif?v=1) no-repeat 0 0;
+}
+.register-box .code { width:112px; }
+.register-box .ico-war {
+    position:absolute;
+    top:11px;
+    right:11px;
+    z-index:3;
+    width:18px;
+    height:18px;
+    overflow:hidden;
+    background:url(../images/icon_popup.gif) no-repeat 0 0;
+    cursor:pointer;
+}
+.register-box .v-code .ico-war {
+    right:179px;
+}
+.register-box .v-code .popup-hint {
+    right:168px;
+}
+.register-box .select{
+        float: left;
+        font-size: 16px;
+        width:200px;
+    height:40px;
+    padding:9px;
+        margin-right: 10px;
+    line-height:20px;
+    color:#666;
+    border:1px solid #D6D6D6;
+    border-top-color:#AFAFAF;
+    background:#FFF url(../images/text.gif?v=1) no-repeat 0 0;
+        *margin-top:8px;
+}
+/*按钮*/
+.register-box button,
+.register-box .button {
+    float:left;
+    width:132px;
+    height:40px;
+    border:0 none;
+    border-radius:2px;
+    background:url(../images/button_reg.png?v=3) no-repeat 0 0;
+}
+.register-box button:hover {
+    background-position:0 -41px;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.2);
+}
+.register-box button:active {
+    background-position:0 -82px;
+}
+.register-box .button {
+    float:right;
+    width:158px;
+    line-height:40px;
+    text-align:center;
+    overflow:hidden;
+    font-size:16px;
+    color:#515B65;
+    background-position:-140px 0;
+}
+.register-box .button:hover {
+    text-decoration:none;
+    background-position:-140px -41px;
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.2);
+}
+.register-box .button:active {
+    background-position:-140px -82px;
+}
+.register-box .btn-disabled,
+.register-box .btn-disabled:hover,
+.register-box .btn-disabled:active {
+    font-size:12px;
+    background-position:-140px 0;
+    box-shadow:none;
+    cursor:default;
+}
+/*已有帐号登录*/
+.login-link {
+    float:left;
+    padding-left:15px;
+    line-height:40px;
+    font-size:16px;
+}
+/*用户服务协议*/
+.register-box .agreement-box {
+    height:40px;
+    margin-top:-10px;
+    line-height:31px;
+    text-indent:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
