@@ -1,6 +1,15 @@
 <?php 
 $this->pageTitle=$datas['page_title'].'---足不出户，畅游中国';
 $edit = $datas['done'] == 'doEdit' ? true : false;
+if($edit || !isset($datas['scene']['desc']) || $datas['scene']['desc']==''){
+	$desc = '请输入简介';
+}
+if($edit){ 
+	$showTime = $datas['scene']['photo_time'] ? date('Y-m-d H:i',$datas['scene']['photo_time']):''; 
+}else{ 
+	$showTime = date('Y-m-d H:i',(time()-3600*24));
+}?>
+?>
 ?>
     <style type="text/css">
         .clear {
@@ -40,14 +49,14 @@ $edit = $datas['done'] == 'doEdit' ? true : false;
 	                        <div class="control-group">
 	                            <label class="control-label" for="login_passwd">拍摄时间</label>
 	                            <div class="controls">
-	                            	<input type="text" name="photo_time"  class="input-xlarge" value="<? if($edit){ echo $datas['scene']['photo_time'] ? date('Y-m-d H:i',$datas['scene']['photo_time']):''; }else{ echo date('Y-m-d H:i',(time()-3600*24));}?>" id="scene_photo_time">
+	                            	<input type="text" name="photo_time"  class="input-xlarge" value="<?=$showTime?>" id="scene_photo_time">
 	                            </div>
 	                        </div>
 	                        <div class="control-group">
 	                            <label class="control-label" for="login_passwd">场景简介</label>
 	                            <div class="controls">
 	                            	<div>
-	                            	<script id="scene_desc" type="text/plain"><?=($edit||$datas['scene']['desc']=='') ? $datas['scene']['desc']:'请输入简介'?></script>
+	                            	<script id="scene_desc" type="text/plain"><?=$desc?></script>
 	                            	</div>
 	                            </div>
 	                        </div>

@@ -2,6 +2,9 @@
 $this->pageTitle=$datas['page_title'].'---足不出户，畅游中国';
 $edit = $datas['done'] == 'doEdit' ? true : false;
 $datas['project']['category_id'] = $edit ? $datas['project']['category_id'] :'';
+if($edit || !isset($datas['scene']['desc']) || $datas['scene']['desc']==''){
+	$desc = '请输入简介';
+}
 ?>
     <style type="text/css">
         .clear {
@@ -44,7 +47,7 @@ $datas['project']['category_id'] = $edit ? $datas['project']['category_id'] :'';
 	                            <label class="control-label" for="login_passwd">项目简介</label>
 	                            <div class="controls">
 	                            	<div>
-	                                <script id="project_desc" type="text/plain"><?=($edit||$datas['scene']['desc']=='') ? $datas['project']['desc']:'请输入简介'?></script>
+	                                <script id="project_desc" type="text/plain"><?=$desc?></script>
 	                            	</div>
 	                            </div>
 	                        </div>
